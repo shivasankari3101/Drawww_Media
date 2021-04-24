@@ -7,6 +7,7 @@ body,html{
     font-family: 'Open Sans', sans-serif;
     color: #4a4a4a;
     overflow-x: hidden;
+    font-size: 1rem;
 }
 
 /* home styles */
@@ -55,7 +56,7 @@ body,html{
     background-color: #4a4a4a;
     width: 40px;
     height: 5px;
-    border-radius: 20%;
+    border-radius: 20px;
     transition: 0.3s;
 }
 
@@ -193,6 +194,10 @@ body,html{
 }
 
 @media screen and (max-width:992px) {
+    .home h1{
+        position: absolute;
+        top: 25%;
+    }
     .main_content{
         grid-gap: 0;
     }
@@ -208,6 +213,7 @@ body,html{
         display: grid;
         grid-template-columns: 30% 70%;
         justify-content: start;
+        margin: 10%;
     }
 
     .home h1{
@@ -215,11 +221,13 @@ body,html{
     }
 
     .categories .options{
-        flex-wrap: nowrap;
+        height: fit-content;
     }
+    
 
     .option{
         width: 200px;
+        height: 500px;
     }
 
     .logo{
@@ -242,7 +250,8 @@ body,html{
         width: 100%;
         height: 0;
         background-color: #4a4a4a;
-        transition: 0.3s; 
+        transition: 0.5s; 
+        border-top-right-radius: 60%;
     }
 
     .menu .search{
@@ -253,6 +262,10 @@ body,html{
        left: 0;
        top: 90px;
        height: calc(100vh - 90px);
+    }
+
+    .menu a{
+        font-size: 1.4rem;
     }
 
     .menu a:hover{
