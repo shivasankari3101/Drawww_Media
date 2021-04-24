@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+/* body styles */
+body,html{                          
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    color: #4a4a4a;
+    overflow-x: hidden;
+}
+
+/* home styles */
+
+.home{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(./images/header.jpg);
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+}
+
+.home h1{
+    font-size: 5rem;
+}
+
+.navbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 90px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5% 0 5%;
+}
+
+.bars{
+    position: absolute;
+    top: 30px;
+    right: 10%;
+    display: none;
+    height: 100%;
+}
+
+.bars span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #4a4a4a;
+    width: 40px;
+    height: 5px;
+    border-radius: 20%;
+    transition: 0.3s;
+}
+
+.bars span:nth-child(1){transform: translateY(0);width:40px}
+.bars span:nth-child(2){transform: translateY(10px);width: 30px;}
+.bars span:nth-child(3){transform: translateY(20px);width: 15px;}
+
+
+.cross span:nth-child(1){transform: translateY(5px) rotateZ(-45deg);width: 40px;}
+.cross span:nth-child(2){transform: translateX(100vw);}
+.cross span:nth-child(3){transform: translateY(5px) rotateZ(45deg);width: 40px;}
+
+
+.logo{
+    width: 100px;
+    height: 50px;
+}
+
+.search{
+    width: 20px;
+    height: 20px;
+}
+
+.menu,.mobile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.menu a{
+    text-decoration: none;
+    margin: 5%;
+    font-weight: bold;
+    color: #9b9b9b;
+}
+
+.menu a:hover{
+    color: #4a4a4a;
+}
+
+.about{
+    color: #9b9b9b;
+    background-color: #000;
+    padding: 3%;
+}
+
+.about h1{
+    color: #F3F3F3;
+}
+
+.about>h1{
+    margin: 5%;
+    color: #9b9b9b;
+}
+
+
+.main_content{
+    display: grid;
+    grid-template-columns: 30% 20% 40%;
+    justify-content: space-between;
+    margin: 5%;
+}
+
+.spl_pic{
+    width: 50px;
+    height: 50px;
+}
+
+.about_pic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about_pic img{
+    width: 100%;
+    height: 100%;
+}
+
+.categories h1{
+    margin: 5%;
+}
+.categories .options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.option{
+    width: 25%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F3F3F3;
+}
+
+.option img,.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.option img{
+    z-index: -1;
+}
+
+.overlay{
+    z-index: 0;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.option h1{
+    position: relative;
+    z-index: 1;
+}
+
+.option img:hover{
+    transform: scale(1.2);
+}
+
+.footer{
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #9b9b9b;
+}
+
+@media screen and (max-width:992px) {
+    .main_content{
+        grid-gap: 0;
+    }
+    .main_content,.specializations{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .specialization{
+        width: 94%;
+        display: grid;
+        grid-template-columns: 30% 70%;
+        justify-content: start;
+    }
+
+    .home h1{
+        font-size: 3rem;
+    }
+
+    .categories .options{
+        flex-wrap: nowrap;
+    }
+
+    .option{
+        width: 200px;
+    }
+
+    .logo{
+        position: absolute;
+        top: 20px;
+        left: 10%;
+    }
+
+    .fixed{
+        display: fixed;
+    }
+
+    .menu{
+        position: fixed;
+        top: 0px;
+        left: -100vw;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 0;
+        background-color: #4a4a4a;
+        transition: 0.3s; 
+    }
+
+    .menu .search{
+        display: none;
+    }
+
+    .open{
+       left: 0;
+       top: 90px;
+       height: calc(100vh - 90px);
+    }
+
+    .menu a:hover{
+          color: #F3F3F3;
+    }
+
+    .bars{
+        display: block;
+    }
+}
+
+@media  screen and (max-width:600px) {
+    .categories .options{
+        display: block;
+    }
+
+    .option{
+        width: 100%;
+    }
+}
