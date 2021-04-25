@@ -120,6 +120,7 @@ body,html{
 .search{           /*Search button*/
     width: 20px;
     height: 20px;
+    cursor: pointer;
 }
 
 
@@ -144,7 +145,7 @@ body,html{
 }
 
 .about_dark{
-    background-color: #F3F3F3;
+    background-color: #fff;
     color: #4a4a4a;
 }
 
@@ -189,8 +190,13 @@ body,html{
 
 /*categories styles*/
 
+.categories{
+    background-color: #F3F3F3;
+}
+
 .categories h1{    /*headings in categories section*/
-    margin: 5%;
+    margin: 0;
+    padding: 5%;
 }
 .categories .options{   /*Container of all categories*/
     display: flex;
@@ -221,17 +227,17 @@ body,html{
 }
 
 .option img{    /*Category image*/ 
-    z-index: -1;
+    z-index: 0;
 }
 
 .overlay{      /*Light black overlay*/
-    z-index: 0;
-    background-color: rgba(0,0,0,0.4);
+    z-index: 1;
+    background-color: rgba(0,0,0,0.2);
 }
 
 .option h1{    /*Category name*/
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .option:hover img{   /*Hover effect for category image*/
@@ -323,8 +329,6 @@ body,html{
     }
     .main_content,.specializations{   /*Specializations*/
         display: flex;
-        justify-content: center;
-        align-items: center;
         flex-direction: column;
     }
 
@@ -332,8 +336,8 @@ body,html{
         width: 94%;
         display: grid;
         grid-template-columns: 30% 70%;
-        justify-content: start;
-        margin: 10%;
+        margin: 4%;
+
     }
 
     .categories .options{    /*Container of categories*/ 
@@ -351,6 +355,10 @@ body,html{
 /*Screen size upto 600px*/
 
 @media  screen and (max-width:600px) {
+    .specialization{
+        margin: 10%;
+    }
+
     .categories .options{
         display: block;
     }
