@@ -10,6 +10,28 @@ body,html{
     font-size: 1rem;
 }
 
+.loader{               /*Loader*/
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #F3F3F3;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.7s ease-in-out;
+    visibility: visible;
+    opacity: 1;
+}
+
+.close_loader{       /*Loader when closed*/
+    visibility: hidden;
+    opacity: 0;
+}
+
+
 /* home styles */
 
 .home{
@@ -225,6 +247,11 @@ body,html{
 /*footer styles*/
 
 @media screen and (max-width:992px) {         /*Mobile and Tablet views*/
+    .loader .logo{
+        position: relative;
+        left: 0;
+    }
+    
     .logo{           /*Logo*/
         position: absolute;
         top: 20px;
