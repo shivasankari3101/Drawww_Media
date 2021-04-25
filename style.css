@@ -25,6 +25,7 @@ body,html{
     
 }
 
+
 .close_loader{       /*Loader when closed*/
     left: -100%;
 }
@@ -140,6 +141,19 @@ body,html{
 .about>h1{         
     margin: 5%;
     color: #9b9b9b;
+}
+
+.about_dark{
+    background-color: #F3F3F3;
+    color: #4a4a4a;
+}
+
+.about_dark h1{
+    color: #9b9b9b;
+}
+
+.about_dark>h1{
+    color: #4a4a4a;
 }
 
 
@@ -260,7 +274,7 @@ body,html{
     .menu{           /*Navbar menu when closed in mobile menu*/
         position: fixed;
         top: 0px;
-        left: -100vw;
+        left: -100%;
         z-index: 10;
         flex-direction: column;
         justify-content: space-evenly;
@@ -277,8 +291,8 @@ body,html{
         height: calc(100vh - 90px);
      }
 
-     .fixed{          /*Fixed display for menu when open*/
-        display: fixed;
+    .fixed{           /*Fixed display of body when menu is open*/
+        overflow-y: hidden;
     }
 
     .menu a{

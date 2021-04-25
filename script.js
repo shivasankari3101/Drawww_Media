@@ -6,8 +6,12 @@ window.onload = function(){
     },2000)
 }
 
+document.body.addEventListener("click",function(){
+      document.getElementsByClassName("about")[0].classList.toggle("about_dark");
+})
+
 function open_menu(){
     document.getElementsByClassName("bars")[0].classList.toggle("cross");
     document.getElementsByClassName("menu")[0].classList.toggle("open");
-    document.getElementsByClassName("navbar")[0].classList.toggle("fixed");
+    document.body.classList.toggle("fixed");
 }
